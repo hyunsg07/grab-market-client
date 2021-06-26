@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import axios from "axios";
-import {Link} from"react-router-dom"
+import {Link} from"react-router-dom";
 
 
 
@@ -34,13 +34,12 @@ function MainPage(){
                     <img src="images/banners/banner1.png"/>
                 </div>
                 <h1>퍈매되는 상품들</h1>
-                <div id="product-list">
-                
-                        
+                <div id="product-list">                                       
                         {products.map(function(product, index){
                             return (
                                 <div className = "product-card">
-                                <Link className="product-link" to={'/product'}>
+                                <Link className="product-link" to={`/products/${index}`}>
+                                                       {/* to={"/products/"+index} 를 위에 es6 문법으로 */}
                                 <div>
                                 <img 
                                 className="product-img"  
@@ -67,7 +66,6 @@ function MainPage(){
             </div>
             <div id="footer"></div>
         </div>
-
     );
 }
 
