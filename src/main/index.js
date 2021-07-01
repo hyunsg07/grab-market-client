@@ -20,16 +20,8 @@ function MainPage(){
                 });
             },[])
 
-
-
     return (
-        <div>
-            <div id="header">
-                <div id="header-area">
-                    <img src="images/icons/logo.png"/>
-            </div>
-            </div>
-            <div id="body">
+        <div>            
                 <div id="banner">
                     <img src="images/banners/banner1.png"/>
                 </div>
@@ -37,7 +29,7 @@ function MainPage(){
                 <div id="product-list">                                       
                         {products.map(function(product, index){
                             return (
-                                <div className = "product-card">
+                            <div className = "product-card">
                                 <Link className="product-link" to={`/products/${index}`}>
                                                        {/* to={"/products/"+index} 를 위에 es6 문법으로 */}
                                 <div>
@@ -45,7 +37,7 @@ function MainPage(){
                                 className="product-img"  
                                 src={product.imageUrl}
                                 />
-                                </div>
+                            </div>
                             <div className="product-contents">
                                 <span className="product-name">
                                     {product.name}
@@ -61,11 +53,10 @@ function MainPage(){
                             </Link>
                             </div>
                             );
-                        })}                                                                     
+                        })}
+                </div>                                                                                 
                 </div>        
-            </div>
-            <div id="footer"></div>
-        </div>
+            
     );
 }
 
